@@ -38,9 +38,9 @@ class _ContadorPageState extends State<ContadorPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
-        SizedBox(width: 30,),
+        SizedBox(width: 30.0,),
         FloatingActionButton( child: Icon(Icons.exposure_zero), onPressed: _reset,),
-        Expanded(child: SizedBox( width: 5.0),),
+        Expanded(child: SizedBox( ),),
         FloatingActionButton( child: Icon(Icons.remove), onPressed: _sustraer,),
         SizedBox( width: 5.0),
         FloatingActionButton( child: Icon(Icons.add), onPressed: _agregar,),        
@@ -49,7 +49,8 @@ class _ContadorPageState extends State<ContadorPage> {
 
   }
 
-  void _agregar(){    
+  void _agregar(){   
+    //El setState sirve para redibujar el widget 
     setState( () => _conteo++ );
   }
 
