@@ -10,7 +10,9 @@ class CardPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(10),
         children: <Widget>[
-          _cardTipo1()
+          _cardTipo1(),
+          SizedBox(height: 30.0,),
+          _cardTipo2()
         ],
       ),
     );
@@ -37,6 +39,30 @@ class CardPage extends StatelessWidget {
                 onPressed: (){},
               )
             ],
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _cardTipo2(){
+    return Card(
+      child: Column(
+        children: <Widget>[
+          FadeInImage(
+            image: NetworkImage('https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration( milliseconds: 200 ),
+            height: 330.0,
+            fit: BoxFit.cover,
+          ),
+
+          // Image(
+          //   image: NetworkImage('https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg'),
+          // ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('No tengo idea de que comer')
           )
         ],
       ),
