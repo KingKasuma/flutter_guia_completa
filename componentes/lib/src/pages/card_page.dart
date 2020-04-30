@@ -75,9 +75,13 @@ class CardPage extends StatelessWidget {
       //clipBehavior: Clip.antiAlias,
       child: Column(
         children: <Widget>[
+          //Coloca una imagen con efecto de fade in
           FadeInImage(
+            //Imagen que tiene que ingresar
             image: NetworkImage('https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg'),
+            //Imagen que se muestra hasta que se termine de cargar el que tiene que ingresar
             placeholder: AssetImage('assets/jar-loading.gif'),
+            //Duracion de la animacion
             fadeInDuration: Duration( milliseconds: 200 ),
             height: 330.0,
             fit: BoxFit.cover,
@@ -108,6 +112,7 @@ class CardPage extends StatelessWidget {
           )
         ]
       ),
+      //Widget que hace que el child entre justo dentro del container
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30.0),
         child: card,
