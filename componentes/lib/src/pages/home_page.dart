@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
     //print(menuProvider.opciones);
     //menuProvider.cargarData();
 
+    //El FutureBuilder sirve para un async await, que dice que no se dibujara el widget hasta que haya terminado el future
     return FutureBuilder(
       future: menuProvider.cargarData(),
       //Es la data vacia antes de que se termine de resolver el future

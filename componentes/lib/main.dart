@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       initialRoute: '/',
       routes: getApplicationRoutes(),
-      //Esta propiedad sirve para redirigir a otr ruta en caso de que no exista alguna
+      //Esta propiedad sirve para redirigir a otra ruta en caso de que no exista alguna
       onGenerateRoute: ( RouteSettings settings ){
 
         print("Ruta llamada: ${ settings.name }");
